@@ -19,7 +19,7 @@
 	<article>
 		<h2>文章一级标题</h2>
 		<h3>文章二级标题</h3>
-		<p>北邮人BT 时间：2016年3月18日09:03:38</p>
+		<span class="author">北邮人BT</span><span class="time">时间：2016年3月18日09:03:38</span>
 		<p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，该换行了<br />
 		这是一个很长很长的段落，这是一个很长很长的段落，这是一个很这是一个很长很长的段落,换行了<br />
 		这是一个很长很长的段落，这是一个很长很长的段落，这是一个很这是这是一个很长很长的段落，这是一个很长很长的段落，这是一个很这是,这里有一个连接<a href="http://ife.baidu.com">这里有一个链接</a>是一个很长很长的段落，<strong>这里有加粗</strong>是一个很受到法律上斯洛克的风景</p>
@@ -42,24 +42,28 @@
 			<li>列表二</li>
 			<li>列表三</li>
 		</ul>
+		</article>
+
+		<article>
 		<h2>图片</h2>
-		<ul>
-			<li>好看的图片<br /><img src="http://f.hiphotos.baidu.com/baike/h%3D160/sign=6183d0f6a5c27d1eba263fc22bd4adaf/b151f8198618367a6f081d8f2f738bd4b21ce5db.jpg" alt="陈意涵"></li>
-			<li>好看的图片<br /><img src="http://f.hiphotos.baidu.com/baike/h%3D160/sign=6183d0f6a5c27d1eba263fc22bd4adaf/b151f8198618367a6f081d8f2f738bd4b21ce5db.jpg" alt="陈意涵"></li>
-			<li>好看的图片<br /><img src="http://f.hiphotos.baidu.com/baike/h%3D160/sign=6183d0f6a5c27d1eba263fc22bd4adaf/b151f8198618367a6f081d8f2f738bd4b21ce5db.jpg" alt="陈意涵"></li>
-		</ul>
+		<dl>
+			<dt></dt>
+			<dd><span>好看的图片</span><img src="http://f.hiphotos.baidu.com/baike/h%3D160/sign=6183d0f6a5c27d1eba263fc22bd4adaf/b151f8198618367a6f081d8f2f738bd4b21ce5db.jpg" alt="陈意涵"></dd>
+			<dd><span>好看的图片</span><img src="http://f.hiphotos.baidu.com/baike/h%3D160/sign=6183d0f6a5c27d1eba263fc22bd4adaf/b151f8198618367a6f081d8f2f738bd4b21ce5db.jpg" alt="陈意涵"></dd>
+			<dd><span>好看的图片</span><img src="http://f.hiphotos.baidu.com/baike/h%3D160/sign=6183d0f6a5c27d1eba263fc22bd4adaf/b151f8198618367a6f081d8f2f738bd4b21ce5db.jpg" alt="陈意涵"></dd>
+		</dl>
 	</article>
 	<article>
 		<h2>最后一篇文章的一级标题</h2>
 		<h3>文章二级标题</h3>
-		<p>文章作者  发表时间</p>
+		<span class="author">文章作者</span><span class="time">发表时间</span>
 		<ol>
 			<li>排名1</li>
 			<li>排名2</li>
 			<li>排名3</li>
 		</ol>
-		<p>下面是一个表格，给表格加边框</p>
-		<table style="border: 1px solid">
+		<span>下面是一个表格，给表格加边框</span>
+		<table>
 			<thead>
 				<tr><th>表头</th><th>表头</th><th>表头</th></tr>
 			</thead>
@@ -73,8 +77,9 @@
 			</tfoot>
 		</table>
 	</article>
-	<h2>这里以后是一个侧边栏</h2>
-	<h3>侧边栏注册窗口标题</h3>
+
+	<aside>
+	<h3>这里以后是一个侧边栏侧边栏注册窗口标题</h3>
 	<form>
 		<label for="address">请输入邮箱地址</label>
 		<input type="text" id="address" placeholder="这是一个文本框"></input>
@@ -101,6 +106,7 @@
 		<textarea name="msg" cols="30" rows="2">这是一个输入框</textarea>
 		<input type="button" value="确认提交"></input>
 	</form>
+	</aside>
 	<p>版权所有&copy</p>
 </body>
 </html>

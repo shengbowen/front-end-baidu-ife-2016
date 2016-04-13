@@ -46,10 +46,116 @@ header ul li:hover{
 	border-bottom: 2px solid red;
 }
 
-article{
+article, aside{
 	display: block;
 	margin: 30px;
 	padding: 20px;
 	background-color: white;
 	box-shadow: 2px 2px 1px #848484;
+}
+
+article h2{
+	padding: 10px 0;
+}
+
+article h3{
+	padding: 10px 0;
+	font-size: 16px;
+	color: #979694;
+}
+
+article a{
+	color: #0000e1;
+}
+
+article p{
+	text-indent: 2em;
+	line-height: 28px;
+	padding: 10px 0;
+	color: 000107;
+}
+
+article ul li{
+	list-style: none;
+	padding: 5px 20px;
+}
+
+/*article ul{
+	padding: 5px 40px;
+}
+*/
+.author,.time{
+	color: #8b7f7f;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+article dl{
+	text-align: center;
+}
+article dl dd {
+	border: 1px solid grey;
+	width: 126px;
+	height: 130px;
+	margin:16px 40px;
+}
+
+article dl dd span{
+	display: block;
+	margin: 10px auto;
+	font-size: 12px;
+}
+
+article dl dd img{
+	width: 100px;
+	height: 84px;
+	margin: 5px;
+}
+
+article ol{
+	margin:10px 40px;
+}
+
+article ol li{
+	margin:5px;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+	/*border: 1px solid #c8c8c8;*/
+}
+/*table th{
+	border: 1px solid #c8c8c8;
+	text-align: left;
+}
+table td{
+	border: 1px solid #c8c8c8;
+	text-align: left;
+}*/
+
+table, table th, table td, table tfoot td{
+	border: 1px solid #c8c8c8;
+	text-align: left;
+}
+
+table tr{
+	height: 24px;
+}
+
+table th{
+	background-color: #333333;
+	color: white;
+}
+
+table tfoot{
+	background-color: #c8c8c8;
+	font-weight: bold;
+}
+
+aside h3{
+	margin: 20px;
+	border-left: 3px solid grey;
+	height: 40px;
+	line-height: 40px;
 }
