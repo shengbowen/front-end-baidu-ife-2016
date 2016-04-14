@@ -81,32 +81,50 @@
 	<aside>
 	<h3>这里以后是一个侧边栏侧边栏注册窗口标题</h3>
 	<form>
-		<label for="address">请输入邮箱地址</label>
+		<div>
+		<label for="address" class="tip">请输入邮箱地址</label>
 		<input type="text" id="address" placeholder="这是一个文本框"></input>
-		<br />
 		<p>请按要求填写</p>
+		</div>
+
+		<div>
 		<label for="pwd1">输入密码</label>
 		<input type="text" id="pwd1"></input>
+		</div>
+
+		<div>
 		<label for="pwd2">重复输入密码</label>
 		<input type="text" id="pwd2"></input>
 		<p>密码为6位英文数字</p>
-		<br />
+		</div>
+		<div>
 		<label for="sex">性别</label>
 		<input type="radio" name="sex" checked="checked" value="male">男</input>
 		<input type="radio" name="sex" value="female">女</input>
+		</div>
+
+		<div>
 		<label>城市</label>
 		<select>
 			<option value="beijing">北京</option>
 		</select>
+		</div>
+
+		<div>
 		<label>爱好：</label>
 		<input type="checkbox" name="hobby">运动</input>
 		<input type="checkbox" name="hobby">艺术</input>
 		<input type="checkbox" name="hobby">科学</input>
+		</div>
+
+		<div>
 		<label>个人描述</label>
 		<textarea name="msg" cols="30" rows="2">这是一个输入框</textarea>
-		<input type="button" value="确认提交"></input>
+		</div>
+		<input type="button" value="确认提交" class="button_sub"></input>
 	</form>
 	</aside>
-	<p>版权所有&copy</p>
+	<footer><p>版权所有&copy</p></footer>
+	
 </body>
 </html>
