@@ -16,6 +16,7 @@ header{
 	/*margin-right: 42px;*/
 	height: 61px;
 	border-bottom: 2px solid #938e8c;
+	font: 12px "黑体";
 }
 
 header .flag{
@@ -23,12 +24,23 @@ header .flag{
 	height: 100%;
 	background-color: #d45d5c;
 	color: #fff;
-	font: 12px "黑体";
+	/*font: 12px "黑体";*/
 	padding: 0 5px 0;
-	/*vertical-align: baseline;*/
 	display: inline-block;
 }
 
+header .flag span{
+	display: inline-block;
+	padding-top: 45px;
+	/*margin-top: 45px;  会发生折叠，这个需要注意*/
+}
+
+header .date{
+	color: #d45d5c;
+	/*float: right;*/
+	/*display: block;*/
+	margin-left: 82%;
+}
 header, .top_side{
 	width: 892px;
 	margin: 0 auto;
@@ -43,16 +55,59 @@ header, .top_side{
 
 .top_side .left_side{
 	float: left;
+	position: relative;
 	width: 641px;
 }
 
 .top_side .left_side img{
 	width: 100%;
 	height: 301px;
+	display: inline-block;
+}
+
+.top_side .left_side span{
+	content: "asdf";
+	position: absolute;
+	width: 191px;
+	height: 301px;
+	background: red;
+	opacity: 0.5;
+}      
+
+.top_side .left_side span.l{
+	background-color: #75b86b;
+	left: 0;
+}
+
+.top_side .left_side span.r{
+	background-color: #d45d5c;
+	right: 0;
+}
+
+.top_side .left_side article{
+	content: "";
+	display: block;
+	width: 191px;
+	height: 301px;
+	background: red;
 }
 
 .top_side .right_side{
 	width: 203px;
 	float: right;
 	margin-right: 0px;
+	border-top: 2px solid #cc8091;
+}
+
+.top_side .right_side h1{
+	/*margin-top: 10px;*/
+	font: 24px "microsoft yahei";
+	display: inline-block;
+	/*line-height: 28px;        */
+	height: 35px;  
+	border-bottom: 2px solid black;
+}
+
+.top_side .right_side h1:first-letter{
+	font: 30px "microsoft yahei";
 }
