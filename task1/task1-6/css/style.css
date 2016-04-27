@@ -84,14 +84,6 @@ header, .top_side{
 	right: 0;
 }
 
-.top_side .left_side article{
-	content: "";
-	display: block;
-	width: 191px;
-	height: 301px;
-	background: red;
-}
-
 .top_side .right_side{
 	width: 203px;
 	float: right;
@@ -101,13 +93,78 @@ header, .top_side{
 
 .top_side .right_side h1{
 	/*margin-top: 10px;*/
-	font: 24px "microsoft yahei";
+	font: 20px "microsoft yahei";
 	display: inline-block;
 	/*line-height: 28px;        */
-	height: 35px;  
+	height: 30px;  
 	border-bottom: 2px solid black;
 }
 
 .top_side .right_side h1:first-letter{
-	font: 30px "microsoft yahei";
+	font: 25px "microsoft yahei";
+}
+
+.top_side .right_side p{
+	margin-top: 10px;
+	font: 12px #676767 "楷体"
+}
+
+.top_side .right_side .green_num{
+	font: 116px "microsoft yahei";
+	color: #75b86b;
+	font-style: italic;
+	margin-left: -20px;
+	line-height: 125px;
+}
+
+.top_side .right_side .red_num{
+	font: 55px "microsoft yahei";
+	color: #cc8091;
+	display: inline-block;
+}
+
+.top_side .right_side div div{
+	/*float: right;*/
+	display: inline-block;
+	font: 12px "microsoft yahei";
+}
+
+.top_side .right_side div div .small_red{
+	font-size: 21px;
+	color: #cc8091;
+	margin-bottom: -5px;
+}
+
+.top_side .right_side div div .small{
+	margin: 0;
+}
+
+.top_side .left_side article:not(:last-child){
+	float: left;
+	width: 30%;
+	margin-right: 30px;
+}
+
+.top_side .left_side article h3{
+	font: bold 16px;
+	text-decoration: underline; 
+}
+
+.top_side .left_side article h3.what{
+	color: #92b79c;
+}
+
+.top_side .left_side article h3.why{
+	color: #d2994f;
+}
+
+.top_side .left_side article h3.how{
+	color: #cc7680;
+}
+
+.top_side .left_side article p{
+	font: 12px "microsoft yahei";
+	color: #231815;
+	margin-top: 16px;
+	opacity: 70%;
 }

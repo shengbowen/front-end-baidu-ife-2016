@@ -27,7 +27,7 @@ header ul{
 }
 
 header ul li{
-	text-align: center;
+	/*text-align: center;*/
 	width:60px;
     display:block;
     float:left;
