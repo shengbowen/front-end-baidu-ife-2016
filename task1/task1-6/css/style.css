@@ -4,10 +4,11 @@ body {background-color: #ccc;}
 
 main {
 	width: 980px;
-	height: 1386px;
+	height: 1436px;
 	margin: 0 auto;
 	/*padding-left: 42px;*/
 	/*padding-right: 42px;*/
+	position: relative;
 	background-color: white;
 }
 
@@ -276,6 +277,7 @@ header, .top_side, .down_side{
 .down_side .right_side .down{
 	width: 459px;
 	height: 318px;
+	position: relative;
 	background-color: #eeedd6;
 	margin-top: 30px;
 	border-top: 1px solid transparent; /*防止margin折叠*/
@@ -318,23 +320,85 @@ header, .top_side, .down_side{
 	float: left;
 	font: 110px "microsoft yahei";
 	line-height: 160px;
+	margin-left: 10px;
 }
 
 .down_side .right_side .down .block .right{
 	float: left;
 	color: #fff;
-	margin-top: 30px;
+	margin-top: 40px;
+	margin-left: 15px;
 }
 
-.down_side .right_side .down .block .right p:nth-child(1)
+.down_side .right_side .down .block .left:after{
+	position: absolute;
+	content: "";
+	height: 86px;
+	display: block;
+	border-left: 2px solid #fff;
+	top:40px;
+	left:80px;
+}
+
+.down_side .right_side .down .block .right p:nth-child(1),
 .down_side .right_side .down .block .right p:nth-child(2)
 {
 	font:italic 21px/24px "黑体";
-	color: red;	
 }
 
-.down_side .right_side .down .block .right p:nth-child(3)
+.down_side .right_side .down .block .right p:nth-child(3),
 .down_side .right_side .down .block .right p:nth-child(4)
 {
-	font:italic 12px/6px "黑体";	
+	font:italic 12px/16px "黑体";	
+}
+
+.down_side .right_side .down .quote{
+	/*position: absolute;
+	right: 10px;
+	bottom: 0;
+	width: 140px;
+	font: oblique 14px/16px "黑体";*/
+	font-size: 14px;
+  color: #5a5b5b;
+  font-family: "黑体";
+  font-style: oblique;
+  line-height: 16px;
+  text-indent: 3em;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 178px;
+  height: 160px;
+  margin-right: 10px;
+}
+
+.down_side .right_side .down .quote .q_l{
+	position: absolute;
+	font: 72px "黑体";
+	color: #d45d5c;
+  	bottom: 90px;
+  	right: 150px;
+}
+
+.down_side .right_side .down .quote .q_r{
+	position: absolute;
+	font: 72px "黑体";
+	color: #d45d5c;
+}
+
+.footer{
+	position: absolute;
+	bottom: 0;
+	width: 892px;
+	margin-left: 44px;
+	height: 40px;
+	border-top: 1px solid #938e8c;
+}
+
+.footer .cp{
+	position: absolute;
+	top: 0;
+	right: 0;
+	font: 12px "黑体";
+	color:#d45d5c;
 }
