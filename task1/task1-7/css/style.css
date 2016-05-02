@@ -1,0 +1,240 @@
+*,body{padding: 0; margin: 0; box-sizing: border-box;}
+
+.container{
+	min-width: 1280px;
+}
+
+.header{
+	height: 56px;
+	line-height: 56px;
+	border-bottom: 1px solid #E6E6E6;
+}
+
+.logo{
+	float: left;
+	font: 21px "黑体";
+	margin-left: 60px;
+	text-indent: 42px;
+	line-height: 56px;
+	background: url(../image/header_logo.png) left center no-repeat;
+}
+
+a{text-decoration: none;}
+ul{list-style: none;}
+
+.login{
+	float: right;
+	background: url(../image/user_icon.png) 0 50% no-repeat;
+	font: 14px "microsoft yahei";
+	text-indent: 21px;
+	color: #e9605e;
+	/*margin: 19px 64px 18px 0;*/
+	margin-right: 64px;
+	line-height: 56px;
+}
+
+.nav{
+	float: right;
+	/*line-height: 60px;*/
+	margin-right: 45px;
+	box-sizing: border-box;
+	
+}
+
+.nav li{
+	margin-left: 45px;
+	display: inline-block;
+	width: 66px;
+	text-align: center;
+	height: 56px;
+	box-sizing: border-box;
+}
+
+.nav li a{
+	font: 14px "microsoft yahei";
+	color: #7C7A82;
+	transition: all 0.3s;
+}
+
+.selected{
+	border-bottom: 4px solid #e9605e;
+}
+
+.nav li.selected a{
+	color: #e9605e;
+}
+
+.nav li a:hover{
+	color: black;
+}
+
+
+/* banner */
+.banner{width: 100%; position: relative;}
+
+.banner .banner_img{
+	height: 692px;
+	background: url(../image/banner_bg.jpg)  0 0 no-repeat;
+	background-size: cover;
+	padding-left: 120px;
+	padding-top: 228px;
+	color: #fff;
+}
+
+.banner .banner_img h1{
+	font: 60px "microsoft yahei";
+	margin-bottom: 28px;
+}
+
+.banner .banner_img p{
+	font: 21px "microsoft yahei";
+}
+
+.banner .banner_img a{
+	font: 30px "microsoft yahei";
+	width: 332px;
+	height: 64px;
+	text-align: center;
+	background-color: #e7504d;
+	display: inline-block;
+	line-height: 64px;
+	margin-top: 60px;
+	color: #fff;
+}
+
+.banner .banner_img a:hover{
+	background-color: #fff;
+	color:#e7504d;
+}
+
+.banner .info{padding-top: 44px; height: 250px;}
+
+.banner .info li{
+	float: left; 
+	width: 25%;
+	height: 100%;
+	word-wrap: break-word;
+	text-align: center;
+}
+
+.banner .info li i{
+	display: block;
+	width: 42px;
+	height: 42px;
+	margin: 0 auto;
+	background: url(../image/info_icon.png) no-repeat;
+}
+
+/*.banner .info li .first{
+	background-position: 0 0;
+}*/
+
+.banner .info li .second{
+	background-position: 0 -54px;
+}
+
+.banner .info li .third{
+	background-position: 0 -107px;
+}
+
+.banner .info li .forth{
+	background-position: 0 -159px;
+}
+
+.banner .info li p{
+	margin-top: 44px;
+	padding: 0 90px 0 90px;
+	font: 14px "黑体";
+	color:#8c8d8d;
+}
+
+/* about */
+
+.about{
+	height: 360px; 
+	background-color: #ededec; 
+	width: 100%;
+	padding-top: 89px;
+}
+
+.about .big_logo{
+	display: block;
+	margin:0 auto;
+}
+
+.about h1.title{
+	font: 54px "黑体";
+	text-align: center;
+	color: #c9c9c9;
+	margin-top: 47px;
+	margin-bottom: 80px;
+}
+
+/*search*/
+.search{
+	height: 340px;
+	background: url(../image/map.jpg) 0 0 no-repeat;
+	background-size: cover;
+	padding-top: 48px;
+	text-align: center;
+}
+
+.search h1{
+	font: 21px "microsoft yahei";
+	color:#fff;
+}
+
+.search hr{
+	width: 30px;
+	size:3px;
+    margin:10px auto 0;
+}
+
+.search p{
+	margin-top: 20px;
+	margin-bottom: 47px;
+	font: 12px "microsoft yahei";
+	color: #fff;
+}
+
+.search .select{
+	display: inline-block;
+	position: relative;
+	margin-right: 30px;
+	border: 1px solid transparent;
+}
+
+.search .select select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	padding-left: 10px;
+	width: 226px;
+	height: 36px;
+
+}
+
+.search .select::after{
+	content: "";
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	background: url(../image/mail.png) 0 0 no-repeat;
+}
+
+.search .select:hover{
+	border: 1px solid #bf4f49;
+}
+
+.search .btn_search{
+	width: 236px;
+	height: 36px;
+	display: inline-block;
+	background-color: #bf4f49;
+	color: #fff;
+	border: none;
+	font: 14px "microsoft yahei";
+}
