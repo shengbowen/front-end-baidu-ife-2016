@@ -238,3 +238,208 @@ ul{list-style: none;}
 	border: none;
 	font: 14px "microsoft yahei";
 }
+
+.pic_wall{
+	height: 604px;
+	background-color: #f7f7f7;
+	padding-left: 146px;
+	padding-top: 100px;
+	text-align: center;
+}
+
+.pic_wall>div{
+	display: inline-block;
+	margin-right: 36px;
+}
+
+.pic_wall .pic{
+	padding: 10px;
+	background-color: #fff;
+	border-left: 1px solid #DCDCDD;
+	border-top: 1px solid #DCDCDD;
+	border-right: 1px solid #DCDCDD;
+}
+
+.pic_wall h3{
+	font: bold 14px "microsoft yahei";
+	margin-top: 12px;
+}
+
+.pic_wall p{
+	font: 14px "microsoft yahei";
+	color: #bcbdbd;
+	margin-top: 10px;
+}
+
+.pic_wall .shanghai h3{
+	font: bold 22px "microsoft yahei";
+	letter-spacing: 20px;
+	margin-top: 0px;
+	padding-left: 10px;
+}
+
+.pic_wall .shanghai p{
+	margin-top: 5px;
+}
+
+/*more info*/
+.more_info{
+	height: 1086px;
+	background-color: red;
+	width: 100%;
+}
+
+.more_info .pic_info{
+	background: url(../image/colorful.jpg) 0 0 no-repeat;
+	background-size: cover;
+	width: 66%;
+	height: 566px;
+	float: left;
+	position: relative;
+	padding-top: 130px;
+}
+
+.more_info .pic_info::after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: 0;
+	top: 50%;
+	margin-top: -19px;
+	border-top: 19px solid transparent;
+    border-right: 28px solid #fff;
+    border-bottom: 19px solid transparent;
+
+}
+
+.more_info .pic_info h1,.more_info .pic_info h2,.more_info .pic_info p{
+	font-family: "microsoft yahei";
+	color: #fff;
+	text-align: center;
+}
+
+.more_info .pic_info h2{
+	font-size: 50px;
+}
+
+.more_info .pic_info h1{
+	font-size: 122px;
+	margin-bottom: 36px;
+}
+
+.more_info .pic_info p{
+	font-size: 21.91px;
+	margin-bottom: 19px;
+}
+
+.more_info .new_world{
+	float: right;
+	background: #fff;
+	width: 34%;
+	height: 566px;
+}
+
+.more_info .new_world .first{
+	color: black;
+	padding-top: 162px;
+	text-align: center;
+	padding-left: 72px;
+	padding-right: 72px;
+}
+
+.more_info .new_world .first p:first-child{
+	font:bold 21.91px "microsoft yahei";
+	padding-bottom: 28px;
+}
+
+.more_info .new_world .first span{color: #e74f4d;}
+
+.more_info .new_world .first p{
+	font-size: 14px "microsoft yahei";
+	line-height: 30px;
+}
+
+.more_info .btn_more{
+	width: 106px;
+	height: 32px;
+	border: 2px solid #e74f4d;
+	/*border:none;*/
+	background-color: #fff;
+	color: #e74f4d;
+	font-weight: bold;
+	margin: 48px auto 0 auto;
+	display: block;
+}
+
+.more_info .new_world .tab{
+	width: 62px;
+	margin: 24px auto;
+	overflow: hidden;
+}
+
+.more_info .new_world .tab li:not(:last-child){
+	margin-right: 12px;
+}
+
+.more_info .new_world .tab li{
+	float: left;
+	border: 2px solid #929293;
+	width: 12px;
+	height: 12px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.more_info .new_world .tab li.selected{
+	background-color: #929293;
+}
+
+.more_info .new_time{
+	width: 33%;
+	height: 521px;
+	float: left;
+	background-color: #fff;
+	padding-top: 172px;
+	text-align: center;
+	font: 21px "黑体";
+	position: relative;
+}
+
+.more_info .new_time p {
+	margin-bottom: 15px;
+}
+
+.more_info .new_time span {
+	width: 30px;
+	border:1px solid;
+	display: inline-block;
+}
+
+.more_info .red{
+	background-color: #e74f4d;
+	color: #fff;
+	
+}
+
+.more_info .new_time::after{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 50%;
+	margin-top: -19px;
+	right: -28px;
+	border-left: 28px solid #fff;
+	border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+}
+
+.more_info .other_pic{
+	background: url(../image/train.jpg) 0 0 no-repeat;
+	background-size: cover;
+	width: 34%;
+	height: 521px;
+	float: left;
+}
