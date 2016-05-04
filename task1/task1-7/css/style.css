@@ -443,3 +443,214 @@ ul{list-style: none;}
 	height: 521px;
 	float: left;
 }
+
+/*join_us*/
+.join_us{
+	width: 100%;
+	height: 752px;
+	background-color: #fff;
+	padding-top: 116px;
+	text-align: center;
+}
+
+.join_us h2{
+	font: 21px "黑体";
+	color: #d0d0d0;
+	margin-bottom: 5px;
+}
+
+.join_us span{
+	width: 40px;
+	border-top: 1px solid #e74f4d;
+	border-bottom: 1px solid #e74f4d;
+	display: inline-block;
+	margin-bottom: 10px;
+
+}
+
+.join_us p{
+	font: 14px "黑体";
+	line-height: 18px;
+	color:#c3c3c3;
+}
+
+.join_us .wrap{
+	width: 70%;
+	height: 308px;
+	margin: 98px auto 0;
+	padding: 10px;
+	text-align: left;
+}
+
+.join_us .wrap .left{
+	width: 292px;
+	margin-right: 74px;
+	float: left;
+}
+
+.join_us .wrap .left .agreement,.join_us .wrap .left .rights{
+	height: 118px;
+}
+
+.join_us .wrap .left h3{
+	font: 21px "黑体";
+	margin-bottom: 12px;
+}
+
+.join_us .wrap .left p{
+	font: 12px/18px "宋体";
+	color: #a5a3a2;
+}
+
+.join_us .wrap .left .more{
+	font: 12px "宋体";
+	float: right;
+	position: relative;
+	color: #a5a3a2;
+}
+
+.join_us .wrap .left .more:before{
+	content: "";
+	width: 8px;
+	height: 8px;
+	position: absolute;
+	display: block;
+	left: -20px;
+	border-right: 1px solid #a5a3a2;
+	border-bottom: 1px solid #a5a3a2;
+	transform: rotate(45deg);
+}
+
+.join_us .wrap .right{
+	margin-left: 366px;
+	height: 100%;
+}
+
+.join_us .wrap .right input:nth-child(2n+1){
+	height: 40px;
+	width: 48%;
+	margin-bottom: 14px;
+	float: left;
+}
+
+.join_us .wrap .right input:nth-child(2n){
+	margin-bottom: 14px;
+	height: 40px;
+	width: 48%;
+	float: right;
+}
+
+.join_us .wrap .right textarea{
+	width: 100%;
+	height: 118px;
+	padding-top: 10px;
+}
+
+.clearfix:after{content:'';clear: both; display:block;}
+
+.join_us .wrap .right input,.join_us .wrap .right textarea{
+	background-color: #ececee;
+	font: bold 12px "宋体";
+	padding-left: 14px;
+	border:none;
+}
+
+.join_us .wrap .right button{
+	height: 40px;
+	width: 100%;
+	margin-top: 14px;
+	border:none;
+	background-color: #ececee;
+}
+
+.contact_us{
+	width: 100%;
+	height: 358px;
+	background-color: #32363e;
+	padding-top: 90px;
+	color: white;
+	text-align: center;
+}
+
+.contact_us h2{
+	font: 21px "黑体";
+}
+
+.contact_us p{
+	font: 14px "黑体";
+	line-height: 20px;
+}
+
+.contact_us .box{
+	width: 45%;
+	margin:30px auto;
+	overflow: auto;
+}
+.contact_us .box .email,.contact_us .box .submit{
+	display: block;
+	height: 40px;
+	float: left;
+}
+
+.contact_us .box .email{
+	width: 80%;
+	padding-left: 10px;
+}
+
+.contact_us .box .submit{
+	width: 20%;
+	border:none;
+	background-color: #6f7178;
+	color: white;
+	font-weight: bold;
+}
+
+.contact_us ul{
+	overflow: auto;
+	margin:0 auto;
+	display: inline-block;
+}
+
+.contact_us li{
+	float: left;
+	width: 30px;
+	height: 25px;
+	background: url(../image/share_icon.png);
+}
+
+.contact_us li:not(:last-child){
+	margin-right: 32px;
+}
+
+.contact_us .qq{
+	background-position: 0  0;
+}
+
+.contact_us .weibo{
+	background-position: 0 -40px;
+}
+.contact_us .twitter{
+	background-position: 0 -80px;
+}
+.contact_us .ie{
+	background-position: 0 -120px;
+}
+
+.footer{
+	width: 100%;
+	height: 58px;
+	background-color: #2f2f38;
+	color: white;
+    padding-top: 20px;
+}
+
+.footer p{
+	float: left;
+	margin-left: 100px;
+}
+
+.footer a{
+	color: white;
+	float: right;
+	margin-right: 36px;
+}
