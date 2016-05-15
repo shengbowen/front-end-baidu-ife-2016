@@ -16,13 +16,14 @@
 a{color: white; text-decoration: none;}
 ul{list-style: none;}
 
-.clearfix:after, .clearfix:before{
-	content: "";
-	display: block;
+.clearfix:after{
+	content: ".";
 	width: 0;
 	height: 0;
-	visibility: hidden;
 	overflow: hidden;
+	clear: both;
+	visibility: hidden;
+
 }
 
 .logo{
@@ -286,11 +287,11 @@ ul{list-style: none;}
 #wrap{
 	/*width: 100%;*/
 	/*height: 100%;*/
-	height: 400px;
+	/*height: 400px;*/
 	padding-left: 60px;
 	padding-right: 60px;
 	padding-top: 20px;
-	background: red;
+	background: #ededec;
 	box-sizing: border-box;
 }
 
@@ -451,6 +452,10 @@ ul{list-style: none;}
 	cursor: pointer;
 }
 
+#wrap .section2 .price.selected,#wrap .section2 .price:hover{
+	border-top: 4px solid #4288c8;
+}
+
 #wrap .section2 .price span{
 	font: 12px "microsoft yahei";
 }
@@ -486,4 +491,187 @@ ul{list-style: none;}
 	width: 40px;
 	height: 40px;
 	background: url(../image/calendar.png) 0 0 no-repeat;
+}
+
+#wrap .section3{
+	margin-top: 18px;
+}
+
+#wrap .section3 h2{
+	font: 12px "microsoft yahei";
+	line-height: 20px;
+	height: 20px;
+}
+
+#wrap .section3>div{
+	float: left;
+	box-sizing: border-box;
+	height: 70px;
+	width: calc((100% - 30px * 3) /4 );
+	margin-right: 30px;
+	background: white;
+	position: relative;
+}
+
+#wrap .section3 .green{
+	border-left: 4px solid #43b29d;
+}
+
+#wrap .section3 .blue{
+	border-left: 4px solid #388ac1;
+}
+
+#wrap .section3 .red{
+	border-left: 4px solid #d04b36;
+}
+
+#wrap .section3 .yellow{
+	border-left: 4px solid #e2cd46;
+}
+
+#wrap .section3>div p{
+	font:bold 12px "黑体";
+	margin-top: 14px;
+	margin-left: 8px;
+}
+
+#wrap .section3>div>div{
+	width: 62px;
+	height: 48px;
+	background-color: red;
+	position: absolute;
+	right: 16px;
+	top: 12px;
+}
+
+#wrap .section3>div.green>div{
+	background-color: #43b29d;
+}
+
+#wrap .section3>div.blue>div{
+	background-color: #388ac1;
+}
+
+#wrap .section3>div.red>div{
+	background-color: #d04b36;
+}
+
+#wrap .section3>div.yellow>div{
+	background-color: #e2cd46;
+}
+
+#wrap .section3>div:last-child{
+	margin-right: 0; 
+}
+
+#wrap .section4{
+	margin-top: 15px;
+}
+
+#wrap .section4 .panel{
+	/*border: 1px solid #d7d8da;*/
+	margin-right: 10px;
+	background: white;
+	float: left;
+	box-shadow:1px 0 1px 1px rgba(0, 0, 0, 0.1);
+	/*border-radius: 6px;*/
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+#wrap .section4 .panel:last-child{
+	margin-right: 0;
+}
+
+#wrap .section4 .panel.col-4{
+	width: calc( (100% - 10px) / 10 * 4);
+}
+
+#wrap .section4 .panel.col-6{
+	width: calc( (100% - 10px) / 10 * 6);
+}
+
+#wrap .section4 .panel h2{
+	height: 30px;
+	padding-top: 10px;
+	font: 12px "黑体";
+	padding-left: 20px;
+	background-color: #f4f5f6;
+	border-radius: inherit;
+	color: #aaaaaa;
+}
+
+#wrap .section4 .panel .panel_content{
+	height: 316px;
+}
+
+#wrap .section4 .panel .panel_content .tabs{
+	position: relative;
+	/*overflow: hidden;*/
+	padding-top: 12px;
+	margin-left: 20px;
+	width: calc(100% - 20px*2);
+	z-index: 1;
+}
+
+#wrap .section4 .panel .panel_content li{
+	float: left;
+	display: block;
+}
+
+#wrap .section4 .panel .panel_content .tabs input{
+	display: none;
+}
+
+#wrap .section4 .panel .panel_content label{
+	display: inline-block;
+	height: 26px;
+	width: 84px;
+	margin-right: 5px;
+	background-color: #ededf0;
+	font: 12px "microsoft yahei";
+	line-height: 26px;
+	text-align: center;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	cursor: pointer;
+}
+
+#wrap .section4 .panel .panel_content .tab_content{
+	border: 1px solid #d9dada;
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	top: 38px;
+	left:0;
+	height: 250px;
+	display: none;
+	/*border-top-left-radius: 5px;*/
+	border-top-right-radius: 5px;
+}
+
+#wrap .section4 .panel .tabs [id^="tab"]:checked ~ .tab_content{
+	display: block;
+	z-index: -1;
+}
+
+#wrap .section4 .panel .tabs [id^="tab"]:checked + label{
+	background: white;
+	border: 1px solid #d9dada;
+	border-bottom: none;
+}
+
+#wrap .section4 .tab_content table{
+	border-collapse: collapse;
+	border: 1px solid #d9dada;
+	font: 12px "宋体";
+	margin:27px auto;
+}
+
+#wrap .section4 .tab_content table td{
+	padding: 8px 17px;
+}
+
+#wrap .section4 .tab_content table td:hover{
+	background-color: #ededf0;
 }
