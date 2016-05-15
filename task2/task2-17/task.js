@@ -94,7 +94,7 @@ function renderChart(data) {
   var innerString = "";
   var width=Math.round(90/data.length*100)/100; //保留2位小数
   for(var i=0; i<data.length; i++){
-    innerString += '<div style="width:'+width+'%"><div style="height:'+data[i][1]+'px; background:'+color[i%color.length]+'"></div></div>';
+    innerString += '<div style="width:'+width+'%"><div style="height:'+data[i][1]+'px; background:'+color[i%color.length]+'" title="'+data[i][0]+'api:'+data[i][1]+'"></div></div>';
   }
  
   oChart.innerHTML= innerString;
