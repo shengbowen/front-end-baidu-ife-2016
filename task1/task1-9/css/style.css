@@ -675,3 +675,63 @@ ul{list-style: none;}
 #wrap .section4 .tab_content table td:hover{
 	background-color: #ededf0;
 }
+
+
+#wrap .section4 .panel_content.panel2 p{
+	font: 12px "microsoft yahei";
+	height: 16px;
+	color: black;
+	margin-bottom: 8px;
+}
+
+#wrap .section4 .panel_content.panel2 h3{
+	font: 12px "microsoft yahei";
+	height: 16px;
+	color: #cccbcb;
+	margin-bottom: 8px;
+}
+
+#wrap .section4 .panel_content .title, #wrap .section4 .panel_content .intro{
+	padding-left: 16px;
+}
+
+#wrap .section4 .panel2{
+	padding: 15px 34px;
+	box-sizing: border-box;
+}
+
+#wrap .section4 .panel_content .intro{
+	border-top: 1px solid #d9dada;
+	border-bottom: 1px solid #d9dada;
+}
+
+#wrap .section4 .panel_content .intro span{
+	display: inline-block;
+}
+
+#wrap .section4 .panel_content .intro span:first-child{
+	width: 30%;
+	border-right: 1px solid #d9dada;
+}
+
+#wrap .section4 .panel_content .detail{
+	padding-left: 16px;
+	height: 144px;
+	border-bottom: 1px solid #d9dada;
+}
+
+#wrap .section4 .panel_content .search_info div{
+	float: left;
+	margin-top: 3px;
+}
+
+#wrap .section4 .panel_content .search_info button{
+	float: right;
+	width: 50px;
+	height: 24px;
+	border: none;
+	background-color: #388ac1;
+	color: white;
+	font: 12px "黑体";
+	margin-top: 4px;
+}
