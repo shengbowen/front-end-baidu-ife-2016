@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task_1_4</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		.container{
+			position: fixed;
+			background-color: #ccc;
+			width: 400px;
+			min-height: 200px;
+			top: 50%;
+			left: 50%;
+			-webkit-transform:translate(-50%, -50%);
+			-ms-transform:translate(-50%, -50%);
+			-o-transform:translate(-50%, -50%);
+			-moz-transform:translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+
+	/*	响应式自适应垂直水平居中
+	.container{background: #ccc; position:absolute; top: 25%;left: 25%;bottom:25%;right: 25%;}
+*/
+		.left_top{
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-color: yellow;
+			z-index: 999;
+			border-radius: 0 0 50px 0;
+		}
+
+		.right_bottom{
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+			background-color: yellow;
+			z-index: 999;
+			border-radius: 50px 0 0 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="left_top"></div>
+		<div class="right_bottom"></div>
+	</div>
+</body>
+</html>

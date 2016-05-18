@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task2-18</title>
+	<style type="text/css">
+		
+		input[type="button"]{
+			font: 12px "黑体";
+			border-radius: 4px;
+			border:1px solid #ccc;
+			background: white;
+			cursor: pointer;
+		}
+
+		input[type="button"]:nth-child(3){margin-right: 20px;}
+		
+		#wrap{list-style: none; overflow: hidden; padding: 0}
+		#wrap li{
+			float: left;
+			margin-right: 10px;
+			background-color: red;
+			padding:10px;
+		}	
+
+	</style>
+</head>
+<body>
+	<div id="control">
+		<input type="text" id="number"/>
+		<input type="button" data-operation="leftIn" value="左侧入" />
+		<input type="button" data-operation="rightIn" value="右侧入" />
+		<input type="button" data-operation="leftOut" value="左侧出" />
+		<input type="button" data-operation="rightOut" value="右侧出" />
+	</div>
+	<ul id="wrap">
+		
+	</ul>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

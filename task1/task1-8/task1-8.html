@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>响应式布局</title>
+	<style type="text/css">
+		*{padding: 0; margin: 0; box-sizing: border-box;}
+		.container{
+			width: 100%;
+			padding: 10px;
+			/*max-width: 1200px;*/
+		}
+
+		.container::before, .container::after{
+			content: " ";
+			display: block;
+			visibility: hidden;
+			clear: both;
+			width: 0;
+			height: 0;
+		}
+
+		.outer{
+			float: left;
+			padding: 10px;
+			/*width: calc(100%/12*4);*/
+		}
+		.outer .inner{
+			background: #eee;
+			width:100%;
+			height: 50px;
+			min-height: 1px;
+			border: 1px solid #999;
+		}
+		@media all and (min-width: 768px) {
+			.col-md-4{
+				width: calc(100%/12*4);
+			}
+
+			.col-md-6{
+				width: calc(100%/12*6);
+			}
+
+			.col-md-3{
+				width: calc(100%/12*3);
+			}
+
+			.col-md-2{
+				width: calc(100%/12*2);
+			}
+
+			.col-md-1{
+				width: calc(100%/12);
+			}
+		}
+
+		@media all and (max-width: 768px) {
+			.col-sm-6{
+				width: calc(100%/12*6);
+			}
+
+			.col-sm-12{
+				width: calc(100%);
+			}
+
+			.col-sm-8{
+				width: calc(100%/12*8);
+			}
+
+			.col-sm-4{
+				width: calc(100%/12*4);
+			}
+
+			.col-sm-3{
+				width: calc(100%/12*3);
+			}
+
+			.col-sm-2{
+				width: calc(100%/12*2);
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="outer col-sm-6 col-md-4"><div class="inner"></div></div>
+		<div class="outer col-sm-6 col-md-4"><div class="inner"></div></div>
+		<div class="outer col-sm-12 col-md-4"><div class="inner"></div></div>
+		<div class="outer col-sm-3 col-md-3"><div class="inner"></div></div>
+		<div class="outer col-sm-6 col-md-6"><div class="inner"></div></div>
+		<div class="outer col-sm-3 col-md-3"><div class="inner"></div></div>
+		<div class="outer col-sm-2 col-md-1"><div class="inner"></div></div>
+		<div class="outer col-sm-2 col-md-1"><div class="inner"></div></div>
+		<div class="outer col-sm-8 col-md-2"><div class="inner"></div></div>
+		<div class="outer col-sm-3 col-md-2"><div class="inner"></div></div>
+		<div class="outer col-sm-3 col-md-6"><div class="inner"></div></div>
+	</div>
+</body>
+</html>
