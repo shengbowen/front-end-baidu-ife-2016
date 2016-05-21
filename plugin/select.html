@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>级联选择器</title>
+</head>
+<body>
+<form>
+	<select name="province">
+		<option>请选择省</option>
+	</select>
+	<select name="city">
+		<option>请选择城市</option>
+	</select>
+	<select name="section">
+		<option>请选择区域</option>
+	</select>
+</form>
+</body>
+
+<script type="text/javascript">
+	//级联选择器demo
+	var province = [
+		{text: "河南", value:"henan"},
+		{text:"湖北",value:"hubei"}
+	];
+
+	var city = {
+		henan:[
+			{text: "郑州", value: "zhengzhou"},
+			{text: "信阳", value:"xinyang"},
+			{text: "洛阳", value:"luoyang"},
+			{text:"开封",value:"kaifeng"}
+		],
+		hubei:[
+			{text:"武汉", value:"wuhan"},
+			{text:"黄冈", value:"huanggang"},
+			{text:"红安",value:"hong_an"},
+			{text:"襄樊", value:"xiangfan"}
+		]
+	};
+
+	function fillSelect(select, list){
+		for(var i=select.length-1; i>0; i--){
+			select.remove(i);
+		}
+		list.forEach(function(data){
+			var option = new Option(data.text, data.value);
+			select.add(option);
+		});
+	}
+
+	var select = document.getElementsByName("province")[0];
+	var city_select = document.getElementsByName("city")[0];
+	var section_select = document.getElementsByName("section")[0];
+	// select.addEventListener("change", function(event){
+	// 	var value = event.target.value;
+	// 	var list = city[value] || [];
+	// 	fillSelect(city_select, list);
+	// });
+
+	// fillSelect(select, province);
+
+//多级选择器demo
+   
+   var mutiple = [
+   		{
+   			text: '河南',value: "henan",
+   			list:[
+   				{text: "郑州", value: "zhengzhou",
+   					list: [
+   						{text: "二七区",value: "erqi",
+   							list:[]
+   						},
+   						{text: "金水区",value: "jinshui",
+   							list:[]
+   						}
+   					]
+   				},
+				{text: "信阳", value:"xinyang",
+					list:[
+						{text:"浉河区",value:"shihe",
+							list:[]
+						},
+						{text:"高新区",value: "gaoxin",
+							list:[]
+						}
+					]
+				}
+   			]
+   		},
+   		{text:"湖北",value:"hubei",
+   			list:[
+   				{text:"武汉",value:"wuhan",
+   					list:[
+   						{text:"武昌区",value:"wuchan",
+   							list:[]
+   						},
+   						{text:"江夏区",value:"jiangxia",
+   							list:[]
+   						}
+   					]
+   				},
+   				{text:"黄冈",value:"huanggang",
+   					list:[
+   						{text:"黄冈区",value:"huanggang",
+   							list:[]
+   						}
+   					]
+   				}
+   			]
+   		}
+
+   ];
+
+
+   function cascade(selectList, data){
+   		fillSelect(selectList[0], data);
+   		if(selectList.length ===1){
+   			return;
+   		}
+   		for(var i=0, len=selectList.length; i<len-1; i++){
+   			selectList[i].addEventListener("change", function(){
+   				var select, dataTemp = data, reset=false; //reset用来判断是否要重置后面的select
+   				//循环遍历每一个select直到当前的select，以计算data
+   				for(var j=0; j<=len-1; j++){
+   					select = selectList[j];
+   					dataTemp = dataTemp[select.selectedIndex - 1].list;
+
+   					if(select === this){ //循环到当前触发事件的select时，停止计算data，并填充后面的一个select
+   						j += 1;
+   						fillSelect(selectList[j], dataTemp);
+   						reset = true; //标记开始重置
+   						j += 1; //待重置的第一个select索引
+   					}
+   					if(reset && j<len){
+   						fillSelect(selectList[j], []);//重置
+   					}
+   				}
+    		}, false);
+   		}
+   }
+
+   var selects = document.getElementsByTagName("select");
+   selects = Array.prototype.slice.call(selects,0);
+   cascade(selects, mutiple);
+
+</script>
+
+
+</html>
