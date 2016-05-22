@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task2-18</title>
+	<style type="text/css">
+		
+		input[type="button"]{
+			font: 12px "黑体";
+			border-radius: 4px;
+			border:1px solid #ccc;
+			background: white;
+			cursor: pointer;
+		}
+
+		input[type="button"]:nth-child(3){margin-right: 20px;}
+		
+		#wrap{list-style: none; overflow: hidden; padding: 0}
+		#wrap li{
+			float: left;
+			margin-right: 10px;
+			background-color: red;
+			padding:10px;
+		}
+		textarea{resize: none;}
+
+		.highlight{
+			color: green;
+			font-weight: bold;
+		}	
+
+	</style>
+</head>
+<body>
+	<div id="control">
+		<textarea id="inputs" rows="5"></textarea>
+		<input type="button" data-operation="insert" value="插入" />
+		<input type="button" data-operation="search" value="查询" />
+		<input id="searchstr" type="text" data-operation="searchstr"  />
+	</div>
+	<ul id="wrap">
+		
+	</ul>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
