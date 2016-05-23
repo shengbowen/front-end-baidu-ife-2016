@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task2-21</title>
+	<style type="text/css">
+		
+		
+		#wrap,ul{list-style: none; overflow: hidden; padding: 0;margin: 20px 10px;}
+		#wrap li,li{
+			float: left;
+			margin-right: 10px;
+			background-color: red;
+			padding:10px;
+		}
+		textarea{resize: none;}
+
+		.highlight{
+			color: green;
+			font-weight: bold;
+		}
+
+		button{display: block;}	
+
+		li.blue{background-color: blue;}
+
+	</style>
+</head>
+<body>
+	<div class="section1">
+		<label for="tag">Tag:</label>
+		<input id="tag" />
+		<ul id="t_ul">
+		</ul>
+	</div>
+	
+	<div id="section2">
+		<textarea id="inputs" rows="5"></textarea>
+		<button id="hobby">确认兴趣爱好</button>
+		<ul id="h_ul">
+		</ul>
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
