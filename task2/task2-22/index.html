@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task2-22</title>
+	
+	<style>
+		*{margin: 0; padding: 0;}
+		div{
+			border: 1px solid black; 
+			display: flex;
+			flex-flow: row nowrap; 
+			justify-content: space-between; 
+			padding: 20px; 
+			flex-grow: 1;
+			transition: background-color 1s;
+			background-color: #fff;
+		}
+		.root{margin:20px;}
+		.root div:first-child{margin-right: 20px;}
+		.level3{width: 20px; height: 20px; }
+		.level3:hover{background-color: red;}
+		.bg{background-color: tomato;}
+		
+		.controls{ margin:50px 100px; text-align: center;}
+		input[type=button]{
+			margin: 20px;
+			border: none;
+			border-radius: 5px;
+			width: 100px;
+			height: 30px;
+			display: inline-block;
+			cursor: pointer;
+		}
+		/*.level2{flex-grow: 1;}*/
+	</style>
+
+</head>
+<body>
+	<div class="root">
+		<div class="level1">
+			<div class="level2">
+				<div class="level3"></div>
+				<div class="level3"></div>
+			</div>
+			<div class="level2">
+				<div class="level3"></div>
+				<div class="level3"></div>
+			</div>
+		</div>
+		<div class="level1">
+			<div class="level2">
+				<div class="level3"></div>
+				<div class="level3"></div>
+			</div>
+			<div class="level2">
+				<div class="level3"></div>
+				<div class="level3"></div>
+			</div>
+		</div>
+	</div>
+	
+	<fieldset class="controls">
+		<legend>控制台</legend>
+		<input type="button" id="pre" value="先序遍历">
+		<input type="button" id="in" value="中序遍历">
+		<input type="button" id="post" value="后续遍历">
+		<input type="button" id="df" value="深度优先">
+		<input type="button" id="bf" value="广度优先">
+		<select name="spread" id="spread">
+			<option value="300">快速</option>
+			<option value="500">中速</option>
+			<option value="1000">慢速</option>
+		</select>
+	</fieldset>
+
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
