@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task2-25</title>
+
+	<style>
+		ul{display: none; list-style: none;}
+		.show{display: block;}
+		/*.hide{display: none;}*/
+		.arrow:before{
+			content: "";
+			display: block;
+			border-left: 3px solid black;
+			border-top: 3px solid transparent;
+			border-bottom: 3px solid transparent;
+			position: absolute;
+			left: 0;
+			top: 5px;
+			transition: all 0.5s;
+		}
+
+		.arrow:hover:before{
+			border-top: 3px solid black;
+			border-left: 3px solid transparent;
+			border-right: 3px solid transparent;
+		}
+		ul{padding-left: 20px;}
+		li{position: relative; padding-left: 8px;}
+		
+		i{display: inline-block;width: 15px;height: 15px; margin-left: 5px; cursor: pointer; font-style: normal;}
+		
+	
+
+
+	</style>
+
+</head>
+<body>
+	<div>
+		
+		<ul class="show" id="first">
+			<li class="">
+				<a>深圳</a>
+				<ul class="">
+					<li class="">
+						<a>广州</a>
+						<ul>
+							<li><a>荔湾区</a></li>
+							<li><a>天河区</a></li>
+						</ul>
+					</li>
+					<li><a>东莞</a></li>
+					<li><a>惠州</a></li>
+				</ul>
+			</li>
+			<li><a>美食</a></li>
+			<li><a>动物</a></li>
+		</ul>
+
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
