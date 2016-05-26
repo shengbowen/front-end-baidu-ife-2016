@@ -5,13 +5,16 @@
 	<title>task2-25</title>
 
 	<style>
+
+		body{height: 600px; text-align: center;}
+
 		ul{display: none; list-style: none;}
 		.show{display: block;}
 		/*.hide{display: none;}*/
 		.arrow:before{
 			content: "";
 			display: block;
-			border-left: 3px solid black;
+			border-left: 5px solid black;
 			border-top: 3px solid transparent;
 			border-bottom: 3px solid transparent;
 			position: absolute;
@@ -20,31 +23,61 @@
 			transition: all 0.5s;
 		}
 
-		.arrow:hover:before{
-			border-top: 3px solid black;
+		.arrow:hover:before, .down_arrow:before{
+			border-top: 5px solid black;
 			border-left: 3px solid transparent;
 			border-right: 3px solid transparent;
 		}
-		ul{padding-left: 20px;}
-		li{position: relative; padding-left: 8px;}
+
+
+		ul{padding-left: 20px; text-align: left; padding-top: 5px;}
+		li{position: relative; padding-left: 8px; margin-bottom: 10px;}
 		
 		i{display: inline-block;width: 15px;height: 15px; margin-left: 5px; cursor: pointer; font-style: normal;}
 		
-	
+		.highlight{background-color: tomato;}
 
+		.wrap{
+			/*width: 400px;*/
+			display: inline-block;
+			margin-top: 150px;
+			padding: 20px 20px 50px 20px;
+			border: 1px solid #09862C; 
+			box-shadow: #0A471B 1px 1px 1px;
+		}
+
+		.expand{
+			font-weight: bold;
+			color: #1BCB4C;
+		}
+		
+		ul li a span{display: none;}
+		ul li a:hover span{display: inline-block;}
+		ul li a{cursor: pointer;}
+		ul li span .add{
+			width: 10px;height: 10px;
+			font-weight: bold;
+		}
+
+		ul li:hover>span{display: inline-block; width: 50px;}
+		
+		
 
 	</style>
 
 </head>
 <body>
-	<div>
-		
+	<div class = "wrap">
+		<div class="box">
+			<input type="text" id="keys" placeholder="输入查询关键字">
+			<button id="search">确定</button>
+		</div>
 		<ul class="show" id="first">
-			<li class="">
+			<!-- <li class="">
 				<a>深圳</a>
 				<ul class="">
-					<li class="">
-						<a>广州</a>
+					<li >
+						<a class="expand">广州</a>
 						<ul>
 							<li><a>荔湾区</a></li>
 							<li><a>天河区</a></li>
@@ -55,7 +88,7 @@
 				</ul>
 			</li>
 			<li><a>美食</a></li>
-			<li><a>动物</a></li>
+			<li><a>动物</a></li> -->
 		</ul>
 
 	</div>
