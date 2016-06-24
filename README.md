@@ -19,17 +19,20 @@
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task1/task1-3/
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task1/task1-2/
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task1/task1-1/
+ 
 ---
 ###JS部分
 * 游戏行星与飞船：
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task2/task2-27/
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task2/task2-26/
+
 * javascript和树：
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task2/task2-25/
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task2/task2-24/
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task2/task2-23/
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task2/task2-22/
-*基础javascipt练习
+
+* 基础javascipt练习
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task2/task2-21/
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task2/task2-20/
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task2/task2-19/
