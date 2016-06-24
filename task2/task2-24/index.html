@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task2-24</title>
+	
+	<style>
+		*{margin: 0; padding: 0;}
+		div{
+			border: 1px solid black; 
+			display: flex;
+			flex-flow: row wrap; 
+			justify-content: space-between; 
+			padding: 20px 5px; 
+			flex-grow: 1;
+			transition: background-color 1s;
+			background-color: #fff;
+			vertical-align: top;
+		}
+		.root{margin:20px;}
+		.root div:not(last-child){margin-right: 10px;}
+		/*.level3{width: 20px; height: 20px; }*/
+		/*.level3:hover, .level4:hover{background-color: red;}*/
+		.bg{background-color: tomato;}
+		
+		.controls{ margin:50px 100px; text-align: center;}
+		input[type=button]{
+			margin: 20px;
+			border: none;
+			border-radius: 5px;
+			width: 100px;
+			height: 30px;
+			display: inline-block;
+			cursor: pointer;
+		}
+		/*.level2{flex-grow: 1;}*/
+	</style>
+
+</head>
+<body>
+	<div class="root">Super
+		<div class="level1">Fish
+			<div class="level2">Apple
+				<div class="level3">Pear</div>
+				<div class="level3">Pig</div>
+				<div class="level3">Colo</div>
+				<div class="level3">Banner</div>
+			</div>
+			<div>Phone</div>
+			<div class="level2">What
+				<div class="level3">Book</div>
+				<div class="level3">School</div>
+			</div>
+		</div>
+		<div class="level1">Note
+			<div class="level2">Human
+				<div class="level3">Man</div>
+				<div class="level3">Woman</div>
+				<div class="level3">Miss</div>
+			</div>
+			<div class="level2">Animal
+				<div class="level3">Cat
+					<div class="level4">Kitty</div>
+				</div>
+				<div class="level3">Dog</div>
+			</div>
+			<div class="level2">Fish</div>
+		</div>
+	</div>
+	
+	<fieldset class="controls">
+		<legend>控制台</legend>
+		<input type="button" id="df" value="深度优先遍历">
+		<input type="button" id="bf" value="广度优先遍历">
+		<select name="spread" id="spread">
+			<option value="300">快速</option>
+			<option value="500">中速</option>
+			<option value="1000">慢速</option>
+		</select>
+		<br/>
+		<input type="text" id="key" placeholder="输入查询关键字" />
+		<input type="button" id="df-search" value="查询(深度优先)">
+		<input type="button" id="bf-search" value="查询(广度优先)">
+		<br/>
+		<input type="text" id="content" placeholder="输入添加节点的内容" />
+		<input type="button" id="add" value="添加">
+		<input type="button" id="remove" value="删除">
+
+	</fieldset>
+
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

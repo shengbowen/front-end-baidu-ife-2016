@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task2-30</title>
+	<style type="text/css">
+		*{margin: 0; padding: 0;}
+		form{margin: 20px auto; width: 500px; font: 20px "宋体"; background-color: #fff;}
+		form label{width: 80px; display: inline-block; text-align: right;}
+		form input{display: inline-block; height: 40px; box-sizing: border-box; line-height: 40px; font-size: 16px; border-radius: 5px; outline: none; border: 1px solid grey; padding: 0 8px;}
+		form .button{width: 100px; padding: 0; background-color: #2F79BA; color: white; margin-left: 200px; cursor: pointer;}
+		form div{margin-bottom: 5px;}
+		form span{color: #9D9D9D;}
+		.info{color: #9D9D9D;}
+		form .warn span{color: red; }
+		form .suc span{color:#7FC56A; }
+
+		.info{display: none;}
+		
+		
+		
+	</style>
+</head>
+<body>
+
+	<form action="" name="signin" id="signin">
+		<div>
+			<label for="name">名称</label>
+			<input type="text" id="uname">	
+		</div>
+		<div class="info">
+			<label></label>
+			<span>必填，长度为4-16个字符</span>
+		</div>
+		<div>
+			<label for="name">密码</label>
+			<input type="text" id="pass1">	
+		</div>
+		<div class="info">
+			<label></label>
+			<span>密码是4-16个字符包含字母数字</span>
+		</div>
+		<div>
+			<label for="name">密码确认</label>
+			<input type="text" id="pass2">	
+		</div>
+		<div class="info">
+			<label></label>
+			<span>再次输入相同密码</span>
+		</div>
+		<div>
+			<label for="name">邮箱</label>
+			<input type="text" id="email">	
+		</div>
+		<div class="info">
+			<label></label>
+			<span>输入正确的邮箱地址</span>
+		</div>
+		<div>
+			<label for="name">电话</label>
+			<input type="text" id="tel">	
+		</div>
+		<div class="info">
+			<label></label>
+			<span>输入正确的电话</span>
+		</div>
+		<input type="button" value="验证" class="button" id="confirm">
+	</form>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
