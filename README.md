@@ -42,5 +42,8 @@
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task2/task2-15/
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task2/task2-14/
  * http://shengbowen.github.io/front-end-baidu-ife-2016/task2/task2-13/
+ 
+###网易最后实战
+http://shengbowen.github.io/front-end-baidu-ife-2016/netease-final-test/
 
 
