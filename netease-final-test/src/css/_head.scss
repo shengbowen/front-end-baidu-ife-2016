@@ -1,0 +1,218 @@
+/*
+ *头部g-hd 部分的样式
+ */
+
+body, html{
+    min-width: 960px;
+    background-color: #f8f8f8;
+}
+
+.g-hd{
+    background-color: #fff;
+    border-bottom: 1px solid transparent;
+}
+
+.m-tips{
+    height: $TIP_HEIGHT;
+    background-color: $TIP_BG_COLOR;
+    p{
+        line-height: $TIP_HEIGHT;
+        font-family: "microsoft yahei";
+    }
+    .u-close{
+        font-size: 20px;
+        line-height: 0;  //不设为0 会导致下方的浮动元素不能浮动到最右边
+        vertical-align: -2px; //修复元素与文字大小不对齐问题，参见张鑫旭vertical-align
+    }
+}
+
+.m-top{
+    height: 90px;
+    .m-logo{
+        .img{display: block;} //防止外部a标签比img标签大出几个像素
+    }
+    .m-watch{
+        display: inline-block;
+        height:22px;
+        line-height: 22px;
+        padding: 31px 0 37px;
+        .fans{
+            margin-left: 7px;
+        }
+
+        .u-watch{
+            display: inline-block;
+            width: 54px;
+            height: 21px;
+            border-radius: 2px;
+            border:none;
+            margin: 0 14px 0 30px;
+            background-color: #21a557;
+            color: #fff;
+            .u-add{
+                font-weight: bold;
+                font-size: 14px;
+                vertical-align: -2px;
+            }
+        }
+
+        .u-unwatch{
+            display: inline-block;
+            position: relative;
+            margin: 0 14px 0 30px;
+            width: 84px;
+            height: 19px;
+            padding-left: 20px;
+            border: 1px solid #efefef;
+            background-color: #f8f8f8;
+            &:hover{
+                background-color: #fff;
+            }
+            /* √ 号图标 */
+            .radic{
+                position: absolute;
+                left: 2px;
+                top: 5px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background: url('../img/icon.png') no-repeat 0 -67px;
+            }
+            .watched{
+                cursor: default;
+            }
+            .cancel{
+                color: #999;
+            }
+            a:hover{
+                text-decoration: underline;
+                color: #21a557;
+            } 
+        }
+    }
+    
+    /* 头部顶栏搜索部分 */
+    .m-search{
+        height:22px;
+        line-height:22px;
+        padding: 31px 0 37px;
+        vertical-align: bottom;
+        .u-links{
+            font: 16px $FONT-FAMILY;
+            height: 22px;
+            li{
+                display: inline-block;
+                margin-left: 56px;
+            }
+            a:hover{
+                color: $GREEN;
+            }
+        }
+        .search{
+            width: 20px;
+            height: 19px;
+            margin-left: 26px;
+            background: url('../img/icon.png') no-repeat 0 0;
+            cursor: pointer;
+            &:hover{
+                background-position: -23px 0;
+            }
+        }
+    }
+}
+
+/* 头部轮播图部分 */
+.g-slide{
+    height: 460px;
+    &:hover .u-arrow{
+        display: block;
+    }
+    .u-arrow{
+        cursor: pointer; 
+        display: none; 
+        position: absolute; 
+        line-height: 39px; 
+        text-align: center; 
+        font-size: 36px; 
+        font-family: "simsun";
+        font-weight: bold; 
+        width: 40px; 
+        height: 40px;  
+        z-index: 2; 
+        top: 180px; 
+        background-color: rgba(0,0,0,.3); 
+        color: #fff;
+        &:hover{
+            background-color: rgba(0,0,0,.7);
+        }
+    }
+    .u-larrow{left: 20px;}
+    .u-rarrow{right: 20px;}
+    
+}
+
+/* 头部图片展示区部分 */
+.m-photos{
+    height: 220px;
+    .list{
+        position: absolute;
+        width: 1616px;
+        left: 50%;
+        margin-left: -808px;
+        li{
+            display: inline-block;
+            width: 320px;
+            height: 220px;
+        }
+    }   
+}
+
+
+/* 头部了解更多部分 */
+
+//实现3栏居中自适应平分
+.g-parent-fix{
+    margin-left: -70px; //将外层父容器拉伸80px，保证子元素都能padding-left：80px，仍保持居中
+    padding: 54px 0;
+}
+
+.m-info{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+    .column{
+        display: table-cell;
+        padding-left: 70px;
+    }
+
+    .info_icon{
+        display: block;
+        margin-top: 10px;
+        width: 80px;
+        height: 80px;
+        background: url('../img/info-icon.png') no-repeat -9999px -9999px;
+    }
+    .open163{
+        background-position: 0 0;
+    }
+    .study163{
+        background-position: 0 -110px;
+    }
+    .icourse163{
+        background-position: 0 -220px;
+    }
+    .info_art{
+        margin-left: 105px;
+    }
+    h2{
+        font: 22px $YAHEI;
+        margin-bottom: 12px;
+    }
+    p, a{
+        font: 14px/24px $YAHEI;
+    }
+    p{
+        margin-bottom: 40px;
+    }
+}

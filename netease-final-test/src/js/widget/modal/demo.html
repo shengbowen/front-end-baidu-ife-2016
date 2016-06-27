@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modal Demo</title>
+  <link rel="stylesheet" href="animate.css">
+  <link rel="stylesheet" href="modal.css">
+  <style>
+  body{
+    background-color: #aaa;
+    height: 2222px;
+  }
+  .u-trigger{
+    display: block;
+    width: 120px;
+    height: 32px;
+    font-size: 16px;
+    margin: 60px auto;
+  }
+  </style>
+</head>
+<body>
+
+
+<!--  
+<div class="m-modal">
+  <div class="modal_align"></div>
+  <div class="modal_wrap">
+    <div class="close">×</div>
+    <div class="modal_head">标题</div>
+    <div class="modal_body">
+        <div><video src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" width="890" height="570"></video></div>
+    </div>
+  </div>
+</div> -->
+  
+  <div id="video"><video src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" width="890" height="570" controls=""></video></div>
+
+<button class='u-trigger' >show modal</button>
+
+<script src='animate.js'></script>
+<script src='modal.js'></script>
+<script>
+
+
+
+var video = document.getElementById('video');
+video.onclick = function(){
+    alert("test");
+}
+
+var modal = new Modal({
+  // 1. 内容配置
+  cotent: video, //可传入节点和字符串
+  // 2. 动画设置
+  animation: {
+    enter: 'bounceIn',
+    leave: 'bounceOut'
+  }
+  // // 3. confirm回调
+  // onConfirm: function(){
+  //   console.log('ok')
+  // },
+  // // 4. cancel糊掉
+  // onCancel: function(){
+  //   console.log('cancel')
+  // }
+})
+
+
+modal.on('confirm', function(){
+  console.log('confirm')
+})
+
+
+
+document.querySelector('.u-trigger').addEventListener('click', function(){
+  modal.show(video); 
+
+})
+</script>
+</body>
+</html>

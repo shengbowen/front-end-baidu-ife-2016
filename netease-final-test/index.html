@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>网易云课堂实战项目</title>
+<meta name="keywords" content="网易 云课堂 项目实战"/>
+<meta name="description" content="这是最后的大作业"/>
+<meta name="viewport" content="width=device-width initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<link rel="stylesheet" href="dist/css/reset.min.css">
+<link rel="stylesheet" href="dist/widget/slide/style.min.css">
+<link rel="stylesheet" href="dist/widget/paginator/paginator.min.css">
+<link rel="stylesheet" href="dist/widget/modal/animate.min.css">
+<link rel="stylesheet" href="dist/widget/modal/modal.min.css">
+<link rel="stylesheet" href="dist/css/style.min.css"/>
+<!--[if lte IE 8]><script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+<!-- <link rel="shortcut icon" href="img/favicon.ico"/>
+<link rel="apple-touch-icon" href="img/touchicon.png"/> -->
+</head>
+<body>
+<div class="g-doc">
+    <!-- 头部 -->
+    <header class="g-hd">
+        <!-- 网站提示信息 -->
+        <div class="m-tips" id="tips" style="display: none">
+            <div class="g-flow f-cb">
+                <p class="f-fl">网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！
+                    <a href="http://study.163.com/" class="u-more" target="_blank" title="网易云课堂">立即查看&gt;</a>
+                </p>
+                <p class="f-fr" id="noMention"><a class="u-close" >&times;</a> 不再提醒</p>
+            </div>
+        </div>
+
+        <div class="g-flow m-top f-cb">
+            <div class="m-logo f-fl">
+                <a href="#" class="f-fl"><img class="img" src="dist/img/logo1.png" alt="logo" title="网易教育产品部" width="236" height="90" /></a>
+                <div class="m-watch">
+                    <button class="u-watch" id="watch"><span class="u-add">+</span> 关注</button>
+                    <div class="u-unwatch" id="unwatch" style="display: none">
+                        <span class="radic"></span><span class="watched">已关注 </span><span class="cancel">&nbsp;|&nbsp; <a id="unwatch">取消</a></span>
+                    </div>
+                    粉丝<span id="fans" class="fans">45</span>
+                </div>
+            </div>
+
+            <div class="m-search f-fr f-cb">
+                <ul class="u-links f-fl">
+                    <li><a href="http://open.163.com/" target="_blank">网易公开课</a></li>
+                    <li><a href="http://study.163.com/" target="_blank">云课堂</a></li>
+                    <li><a href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a></li>
+                </ul>
+                <div class="search f-fr"></div>
+            </div>
+        </div>
+        <!-- slide和一些介绍信息 -->
+        <aside>
+            <!-- slide的容器 -->
+            <div class="g-slide f-pr" id="gslide">
+                <ul class="m-cursor">
+                  <li class='cursor'></li>
+                  <li class='cursor'></li>
+                  <li class='cursor'></li>
+                </ul>
+                <a href="javascript:;"  class="u-arrow u-larrow">&lt;</a>
+                <a href="javascript:;"  class="u-arrow u-rarrow">&gt;</a>
+            </div>
+            <!-- 这里为了实现三列自适应，并且居中，使用了margin-left负值技巧，增加元素的宽度 , 并使用display：table-->
+            <div class="g-flow">
+                <div class="g-parent-fix">
+                    <article class="m-info">
+                        <section class="column f-cb">
+                            <figure class="info_icon f-fl open163"></figure>
+                            <article class="info_art f-oh">
+                                <h2>网易公开课</h2>
+                                <p>推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易公开课频道搭建起强有力的网络视频教学平台</p>
+                                <a href="http://open.163.com/" class="u-more" target="_blank">了解更多&gt;</a>
+                            </article>
+                        </section>
+                        <section class="column f-cb">
+                            <figure class="info_icon f-fl study163"></figure>
+                            <article class="info_art f-oh">
+                                <h2>云课堂</h2>
+                                <p>网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程，创新的个性化学习体验，自由开放的交流互动环境</p>
+                                <a href="http://study.163.com/" class="u-more" target="_blank">了解更多&gt;</a>
+                            </article>
+                        </section>
+                        <section class="column f-cb">
+                            <figure class="info_icon f-fl icourse163"></figure>
+                            <article class="info_art f-oh">
+                                <h2>中国大学MOOC</h2>
+                                <p>是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人，都可以在这里学习中国最好的大学课程，学完还能获得认证证书</p>
+                                <a href="http://www.icourse163.org/" class="u-more" target="_blank">了解更多&gt;</a>
+                            </article>
+                        </section>
+                    </article>
+                </div>
+            </div>
+            <!-- 图片展示区 -->
+            <div class="m-photos f-oh f-pr">
+                <ul class="list">
+                    <li><img src="dist/img/pic2-1.jpg" alt="" width="320" height="220"></li>
+                    <li><img src="dist/img/pic2-2.jpg" alt="" width="320" height="220"></li>
+                    <li><img src="dist/img/pic2-3.jpg" alt="" width="320" height="220"></li>
+                    <li><img src="dist/img/pic2-4.jpg" alt="" width="320" height="220"></li>
+                    <li><img src="dist/img/pic2-5.jpg" alt="" width="320" height="220"></li>
+                </ul>
+            </div>
+        </aside>
+        
+    </header> <!-- /header 网站头部 -->
+    
+    <!-- 网站的主体部分,课程信息自适应剩余宽度 -->
+    <div class="g-bd g-flow f-cb">
+        <!-- 侧栏固定宽度,并且右浮动到最右边 -->
+        <aside class="m-aside f-fr">
+            <!-- 机构介绍 -->
+            <div class="panel">
+                <div class="p_title">机构介绍</div>
+                <div class="p_video">
+                    <p>观看下面的视频了解吧：</p>
+                    <a href="javascript:;" class="vbtn" data-link="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" id="videoBtn"></a>
+                </div>
+            </div>
+            <!-- 最热课程 -->
+            <div class="panel">
+                <div class="p_title">最热排行</div>
+                <!-- hotlist滚动的包裹 -->
+                <div class="m-hotscroll f-oh" id="hotscroll">
+                    <!-- ajax数据渲染hotlist的容器 -->
+                    <ul class="hot_list f-pr" id="hotlist"></ul>
+                </div>
+                <!-- <ul class="hot_list f-oh f-pr" id="hotlist">
+                    <li class="list_item f-cb">
+                        <a href="#" target="_blank" title="课程" class="f-fl"><img src="../img/icon2.png" alt="" width="50" height="50"></a>
+                        <div class="item_info f-oh">
+                            <a href="#"><h3 class="f-elipsis">舞曲揭秘影月揭秘sdf </h3></a>
+                            <div class="like">
+                                <span class="user_icon"></span>
+                                <span class="like_sum">510</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul> -->
+            </div>
+        </aside>
+        <!-- 课程展示自适应剩余宽度，使用float使每行显示的课程数目随窗口大小自适应 -->
+        <div class="m-banner f-oh f-cb" id="courseinfo">
+            <div class="u-tabs" id="tabs">
+                <div class="tab z-selected" data-type="10">产品设计</div>
+                <div class="tab" data-type="20">编程语言</div>
+            </div>
+            <!-- 课程卡片的容器 -->
+            <article class="m-courses f-cb">
+                <!-- <section class="course">
+                    <div class="course_link">
+                        <div class="img f-oh">
+                            <img class="pic" src="../img/pic1.jpg" alt="混音全揭秘">
+                        </div>
+                        <h3 class="f-elipsis title">混音全揭秘 舞曲实战篇 揭秘音乐揭秘音乐的美丽</h3>
+                    </div>
+                    <div class="course_info">
+                        <p><a href="#">音频帮</a></p>
+                        <div class="like">
+                            <span class="user_icon"></span>
+                            <span class="like_sum">510</span>
+                        </div>
+                        <div class="price">&yen; 800.00</div>
+                    </div>
+                </section> -->
+            </article><!-- /article 课程列表结束 -->
+            <!-- 分页器 -->
+            <div class="m-pagewapper f-fr" id="pwapper"></div>
+        </div>
+        
+    </div><!-- /main网站主体结束 -->
+
+    <footer class="g-ft">
+        <div class="g-flow">
+            <ul>
+                <li class="info">
+                    <p class="logo"></p>
+                    <p class="beizhu">&copy;2014 icourse163.org 浙ICP备08114786号-1</p>
+                    <p class="beizhu">icourse.cn 京ICP备12020869号-2 京公网安备110102000459-2</p>
+                </li>
+                <li class="link">
+                    <p>友情链接：</p>
+                    <p><a href="http://open.163.com/">网易公开课</a></p>
+                    <p><a href="http://study.163.com/">网易云课堂</a></p>
+                    <p><a href="http://www.icourse163.org/">中国大学MOOC</a></p>
+                </li>
+                <li class="we">
+                    <p>我们：</p>
+                    <p><a href="javascript:;">关于</a></p>
+                    <p><a href="javascript:;">联系</a></p>
+                    <p><a href="javascript:;">关注<span class="weibo"></span></a></p>
+                </li>
+                <li class="more">
+                    <p>更多：</p>
+                    <p><a href="javascript:;">常见问题</a></p>
+                    <p><a href="javascript:;">意见反馈</a></p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- 课程详情浮层 -->
+    <!-- <div class="m-detail" style="display:none" id="detail">
+        <div class="card f-cb">
+            <a class="f-fl" href="#"><img src="../img/pic1.jpg" alt="" width="224" height="124"></a>
+            <div class="intro f-oh">
+                <h2><a class="title" href="#">手绘系列课程</a></h2>
+                <p class="learn">
+                    <span class="user_icon"></span>
+                    <span class="like_sum">510</span>在学
+                </p>
+                <p class="provider">发布者：<span>sdf</span></p>
+                <p>分类：<span>asdf</span></p>
+            </div>
+        </div>
+        <div class="descript">
+            <p>适用人群：最适合即将实习、求职、就职的大学生，入职一、二三年的新人。别以为那些职场老人都知道！</p>
+        </div>
+    </div> -->
+    <!-- 课程详情包裹层 -->
+    <div class="m-detail" style="display:none" id="detail"></div>
+    <!-- 登陆模块包裹层 -->
+    <div class="wraper" style="display: none" id="wraper">
+        <div class="m-login" id="mlogin">
+            <form name="loginForm" id="loginForm">
+                <h3 class="title">登陆网易云课堂</h3>
+                <input type="text" class="uname" name="uname" placeholder="账号">
+                <input type="password" class="upwd" name="upwd" placeholder="密码">
+                <button class="submit" name="login">登陆</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="dist/js/util.min.js"></script>
+<script type="text/javascript" src="dist/widget/slide/slider.min.js"></script>
+<script type="text/javascript" src="dist/widget/paginator/paginator.min.js"></script>
+<script type="text/javascript" src="dist/widget/modal/animate.min.js"></script>
+<script type="text/javascript" src="dist/widget/modal/modal.min.js"></script>
+<script type="text/javascript" src="vender/md5.min.js"></script>
+<script type="text/javascript" src="dist/js/index.min.js"></script>
+</body>
+</html>
